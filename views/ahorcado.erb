@@ -1,3 +1,10 @@
+
+<% if (@intentos_realizados.nil?)
+     @intentos_realizados = 0
+   end
+
+@intentos_maximos = 6
+ %>
 <html>
 	<body>
 	<title>Adivin&aacute;</title>
@@ -8,7 +15,7 @@
 			<input id="campo_letra" type=text name="campo_letra"/>
 			<input id="boton_validar" type=submit value = "Validar"/>
 		</form>
-
+<p id="intentos">Intentos realizados: <span id="intentos_realizados"><%= @intentos_realizados%></span> de <%= @intentos_maximos %></p>
 	</body>
 </html>
 

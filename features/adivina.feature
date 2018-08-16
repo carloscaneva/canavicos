@@ -8,6 +8,10 @@ Then Pantalla de ganador "Felicidades"
 
 Scenario: Ingreso letras B y es error
 Given Pagina ingreso de letra
-When Solicita letra "B"
+When Ingreso letra "B" 6 veces
 Then Pantalla de perdedor "Over"
 
+Scenario: Ingreso letras B y es error
+Given Pagina ingreso de letra
+When Ingresa letra "B"
+Then Pantalla de ahorcado con "1"
