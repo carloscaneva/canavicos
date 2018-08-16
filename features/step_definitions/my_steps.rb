@@ -1,5 +1,5 @@
 Given(/^Pagina ingreso de letra$/) do
-  visit '/'
+  visit '/nuevo'
 end
 
 When(/^Solicita letra "(.*?)"$/) do |letra|
@@ -13,7 +13,7 @@ Then(/^Pantalla de ganador "(.*?)"$/) do |titulo|
   end
 end
 
-When(/^Ingreso letra "(.*?)" (\d+) veces$/) do |arg1, arg2|
+When(/^Ingreso letra "(.*?)" (\d+) veces$/) do |letra, arg2|
   fill_in("campo_letra", :with => letra)
 click_button("boton_validar")
 fill_in("campo_letra", :with => letra)
@@ -26,8 +26,7 @@ fill_in("campo_letra", :with => letra)
 click_button("boton_validar")
 fill_in("campo_letra", :with => letra)
 click_button("boton_validar")
-fill_in("campo_letra", :with => letra)
-  click_button("boton_validar")
+
 end
 
 
