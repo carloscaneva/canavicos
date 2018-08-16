@@ -7,7 +7,7 @@ class adivina
             if (letra.upcase == "A")
                #ingresar letra en el campo
 	       erb :ganador
-		
+	
 	    else
 		@intentos_realizados += 1
 		if @intentos_maximos = @intentos_realizados 
