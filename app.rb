@@ -3,13 +3,18 @@ require './lib/validar'
 require './lib/adivina'
 
 
-get '/nuevo' do	
+get '/comenzar' do	
+    erb :bienvenida
+end
+
+post '/nuevo' do	
     $ahorcado = Adivina.new
     erb :ahorcado
 end
 
 get '/' do	
-    erb :ahorcado
+    #erb :ahorcado
+   erb :bienvenida
 end
 
 
@@ -22,6 +27,15 @@ post '/reintentar' do
 	$ahorcado = Adivina.new	
         erb :ahorcado
 end
+
+post '/comenzar' do
+	$ahorcado = Adivina.new	
+        erb :ahorcado
+end
+
+
+
+
 
 
 
