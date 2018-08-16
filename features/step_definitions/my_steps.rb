@@ -13,3 +13,9 @@ Then(/^Pantalla de ganador "(.*?)"$/) do |titulo|
   end
 end
 
+Then(/^Pantalla de perdedor "(.*?)"$/) do |titulo|
+  last_response.should have_xpath("//p[@id=\"resultado\"]") do |t|
+  t.should contain(titulo)
+  end
+end
+

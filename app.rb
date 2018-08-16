@@ -11,5 +11,5 @@ end
 
 post '/validar' do
 	@letra= params[:campo_letra] 
-	validarLetra
+	validarLetra(@letra)
 end
