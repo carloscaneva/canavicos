@@ -8,7 +8,8 @@
 			<% 
 			cant_letras = 0
 			while (cant_letras < $ahorcado.palabra.length) do %>
-				<td style="font-weight:bold; font-size:18px;border-bottom:1px solid; margin-left:10px;">&nbsp;</td>
+				<!--<td style="font-weight:bold; font-size:18px;border-bottom:1px solid; margin-left:10px;">&nbsp;</td>-->
+				<td style="font-weight:bold; font-size:18px;border-bottom:1px solid; margin-left:10px;"><%= $ahorcado.letras_encontradas[cant_letras] %></td>
 			<% cant_letras += 1
 			end %>
 			</tr>

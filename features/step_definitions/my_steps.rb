@@ -1,5 +1,5 @@
 Given(/^Pagina ingreso de letra$/) do
-  visit '/nuevo'
+  visit '/test'
 end
 
 When(/^Solicita letra "(.*?)"$/) do |letra|

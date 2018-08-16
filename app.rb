@@ -8,12 +8,17 @@ get '/comenzar' do
 end
 
 post '/nuevo' do	
-    $ahorcado = Adivina.new
+    $ahorcado = Adivina.new(nil)
     erb :ahorcado
 end
 
 get '/nuevo' do	
-    $ahorcado = Adivina.new
+    $ahorcado = Adivina.new(nil)
+    erb :ahorcado
+end
+
+get '/test' do	
+    $ahorcado = Adivina.new("A")
     erb :ahorcado
 end
 
@@ -29,12 +34,12 @@ post '/validar' do
 end
 
 post '/reintentar' do
-	$ahorcado = Adivina.new	
+	$ahorcado = Adivina.new(nil)
         erb :ahorcado
 end
 
 post '/comenzar' do
-	$ahorcado = Adivina.new	
+	$ahorcado = Adivina.new(nil)
         erb :ahorcado
 end
 
