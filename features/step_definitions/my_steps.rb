@@ -13,19 +13,11 @@ Then(/^Pantalla de ganador "(.*?)"$/) do |titulo|
   end
 end
 
-When(/^Ingreso letra "(.*?)" (\d+) veces$/) do |letra, arg2|
-  fill_in("campo_letra", :with => letra)
-click_button("boton_validar")
-fill_in("campo_letra", :with => letra)
-click_button("boton_validar")
-fill_in("campo_letra", :with => letra)
-click_button("boton_validar")
-fill_in("campo_letra", :with => letra)
-click_button("boton_validar")
-fill_in("campo_letra", :with => letra)
-click_button("boton_validar")
-fill_in("campo_letra", :with => letra)
-click_button("boton_validar")
+When(/^Ingreso letra "(.*?)" (\d+) veces$/) do |letra, veces|
+	veces.to_i.times{
+		fill_in("campo_letra", :with => letra)
+		click_button("boton_validar")
+	}
 
 end
 
