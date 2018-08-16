@@ -12,6 +12,11 @@ post '/nuevo' do
     erb :ahorcado
 end
 
+get '/nuevo' do	
+    $ahorcado = Adivina.new
+    erb :ahorcado
+end
+
 get '/' do	
     #erb :ahorcado
    erb :bienvenida
