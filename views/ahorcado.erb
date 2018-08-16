@@ -1,14 +1,23 @@
 <html>
 	<body>
-	<title>Adivin&aacute;</title>
-		<table>
-			<tr style="border-bottom:1px"><td>&nbsp;</td></tr>
+	<div style="margin-left:50px">
+		<p style="font-weight:bold; font-size:22px">Adivin&aacute;</p>
+	</div>
+		<table style="margin-left:20px">
+			<tr>
+			<% 
+			cant_letras = 0
+			while (cant_letras < $ahorcado.palabra.length) do %>
+				<td style="font-weight:bold; font-size:18px;border-bottom:1px solid; margin-left:10px;">&nbsp;</td>
+			<% cant_letras += 1
+			end %>
+			</tr>
 		</table>
-		<form method=post action="validar">
+		<form style="margin-top:50px" method=post action="validar">
 			<input id="campo_letra" type=text name="campo_letra"/>
 			<input id="boton_validar" type=submit value = "Validar"/>
 		</form>
-<p id="intentos">Intentos realizados: <span id="intentos_realizados"><%= $ahorcado.intentos_realizados%></span> de <%= $ahorcado.intentos_maximos %></p>
+		<p id="intentos">Intentos realizados: <span id="intentos_realizados"><%= $ahorcado.intentos_realizados%></span> de <%= $ahorcado.intentos_maximos %></p>
 	</body>
 </html>
 
